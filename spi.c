@@ -2,7 +2,7 @@
 
 
 */
-
+#include "spi.h"
 
 void spi_init()
 {
@@ -11,7 +11,7 @@ void spi_init()
 	TRISB2=0;
 	TRISB4=0;
 	
-	sspstat=0x40;   /*0100 0000
+	SSPSTAT=0x40;   /*0100 0000
 					7 SMP: 	0  	Input data sampled at middle of data output time
 					6 CKE: 	1	Transmit occurs on transition from Idle to active clock state
 					5 D/A: 	0	only for I2C
@@ -22,7 +22,7 @@ void spi_init()
 					0 BF:	0	buffer state
 					*/
 					
-	sspcon=	0x30;		
+	SSPCON=	0x30;
 	
 					/*xxx1 
 					7 WCOL: 	0 		No collision

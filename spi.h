@@ -7,7 +7,7 @@ SCK:	RB4
 
 */
 
-
+#include <xc.h>
 
 void spi_init();
 
